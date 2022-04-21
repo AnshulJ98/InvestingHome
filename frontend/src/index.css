@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.349);
+}
+
+.call-us {
+  background-color: #2386ec;
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: #304057;
+}
+
+.home-banner {
+  background-image: url("/public/home-landing.jpg");
+  background-position: 65%;
+}
+
+.about-banner {
+  background-image: url("/public/logo512.png");
+  background-repeat: repeat-y;
+  background-position: 85%;
+  background-size: cover;
+}
+
+
+
+.navbar-brand {
+  width: 12%;
+}
+.middleTile {
+  background-color: #2386ec;
+  border-radius: 10px;
+}
+
+.edgeTile {
+  border-radius: 20px;
+}
+
+.send-message {
+  background-color: #2386ec;
+  border-radius: 10px;
+}
+.logo {
+  background-image: url("/public/logo512.png");
+}
+
+#call-us{
+  width: 120px;
+  margin: 10px 25px 25px 0px;
+}
+
+#landing-video{
+  width:700px;
+  height:500px ;
+}
+@media (max-width: 799.98px) {
+  #landing-video{
+    width:400px;
+    height:270px ;
+  }
+}
+@media (min-width: 850px) {
+    #myCarousel{
+      display: block;
+    }
+    #carouselExampleDark{
+      display: none;
+    }
+
+
+  /* .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+  
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+transform: translateX(0); */
+}
+
+@media (max-width: 850px) {
+  #myCarousel{
+    display: none;
+  }
+  #carouselExampleDark{
+    display: block;
+  }
+}
+
+
+.box {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-family: sans-serif;
+  line-height: 1;
+ -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px 40px;
+}
+
+@media (min-width: 998px) {
+#carousel-left{
+  left:-40px;
+}
+
+#carousel-right{
+  right:40px;
+}
+}
+.style1{
+  width: 80%; height: 300px; border-radius: 21px 21px 0 0;
+}
