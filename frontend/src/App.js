@@ -5,6 +5,10 @@ import {
   Navigation,
   Footer,
   Home,
+  House,
+  Tiers,
+  ContactUs,
+  AboutUs,
 } from "./components";
 
 function App() {
@@ -13,7 +17,10 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
-          
+          <Route path="/house" element={<House />} />
+          <Route path="/tiers" element={<Tiers />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
         </Routes>
         <Footer />
       </Router>

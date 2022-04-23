@@ -43,6 +43,11 @@ function Navigation() {
                   About Us
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/contactus">
+                  Contact Us
+                </NavLink>
+              </li>
             </ul>
           </div>
           <div id="call-us" className="nav-item nav-pill px-2 call-us"></div>
