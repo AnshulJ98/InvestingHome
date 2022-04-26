@@ -1,7 +1,11 @@
 import React, { useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { CountUp } from "use-count-up";
 
 function House() {
+  const [num, setNum] = React.useState(331231);
+  const bigValue = 10444;
+
   return (
     <div>
       <div className="text-center mt-3 pt-3">
@@ -15,14 +19,20 @@ function House() {
           <div className="col-lg-6 offset-lg-1 p-0 overflow-hidden shadow-lg">
             <img
               className="rounded-lg-3"
-              src="bootstrap-docs.png"
+              src="home-landing.jpg"
               alt=""
               width="720"
             ></img>
           </div>
           <div className="col-lg-5 p-3 p-lg-5 pt-lg-3">
             <h1 className="display-4 fw-bold  fs-1">
-              CA$ 403,549
+              CA$
+              <CountUp
+                isCounting
+                end={403549}
+                duration={1.2}
+                thousandsSeparator={","}
+              />
               <p className="lead fs-6">pledged of CA$ 9,179 goal</p>
             </h1>
             <h1 className="display-4 fw-normal  fs-1 pt-3">
@@ -47,6 +57,40 @@ function House() {
               All or nothing. This project will only be funded if it reaches its
               goal by Thu, May 5 2022 9:58 AM EDT.
             </p>
+          </div>
+        </div>
+      </div>
+      <div className="container justify-content-center cont1 mb-4">
+        <div className="row g-3 py-5 row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 justify-content-center">
+          <div className="feature col d-flex text-left px-4 edgeTile ">
+            <div className="feature-icon edgeTile w-25">
+              <img
+                width="85%"
+                className="edgeTile"
+                src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.2.0/storybook.svg"
+              ></img>
+            </div>
+            <p className="edgeTile  fw-normal lead">Lorem Ipsum is simply</p>
+          </div>
+          <div className="feature col d-flex text-left px-4 edgeTile ">
+            <div className="feature-icon edgeTile w-25">
+              <img
+                width="85%"
+                className="edgeTile"
+                src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.2.0/storybook.svg"
+              ></img>
+            </div>
+            <p className="edgeTile  fw-normal lead">Lorem Ipsum is simply</p>
+          </div>
+          <div className="feature col d-flex text-left px-4 edgeTile ">
+            <div className="feature-icon edgeTile w-25">
+              <img
+                width="85%"
+                className="edgeTile"
+                src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.2.0/storybook.svg"
+              ></img>
+            </div>
+            <p className="edgeTile lead  fw-normal">Lorem Ipsum is simply</p>
           </div>
         </div>
       </div>

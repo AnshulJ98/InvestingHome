@@ -32,23 +32,31 @@ a:hover {
 
 .home-banner {
   background-image: url("/public/home-landing.jpg");
-  background-position: 65%;
+  background-size: contain;
+  max-height: 650px;
 }
 
 .about-banner {
-  background-image: url("/public/logo512.png");
+  background-image: url("/public/london-gfd70a331a_1920.jpg");
   background-repeat: repeat-y;
-  background-position: 85%;
-  background-size: cover;
+  background-position: 45%;
+  background-position-y: 78%;
+  background-size: fill;
 }
 
+.contact-banner {
+  background-image: url("/public/luxury-3115234_1920.jpg");
+  background-repeat: repeat-y;
+  background-position: 85%;
+  background-position-y: 48%;
+  background-size: cover;
+}
 
 
 .navbar-brand {
   width: 12%;
 }
 .middleTile {
-  background-color: #2386ec;
   border-radius: 10px;
 }
 

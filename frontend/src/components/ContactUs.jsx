@@ -56,7 +56,7 @@ function ContactUs() {
                 <span className="text-muted fs-6">
                   Phone <br></br>
                 </span>
-                <p>604-537-6712, 778-713-6712</p>
+                <p>999-999-999, 999-999-9999</p>
               </div>
             </div>
             <div className="col d-flex align-items-start">
@@ -69,7 +69,7 @@ function ContactUs() {
                 <span className="text-muted fs-6">
                   Email Address <br></br>
                 </span>
-                <p>akartar@hotmail.com</p>
+                <p>mail@mail.ca</p>
               </div>
             </div>
             <div className="col d-flex align-items-start py-2">
@@ -82,10 +82,7 @@ function ContactUs() {
                 <span className="text-muted fs-6">
                   Locations <br></br>
                 </span>
-                <p>
-                  Lower mainland, Abbotsford, Mission, North Vancouver, West
-                  Vancouver
-                </p>
+                <p>Greater Toronto Area, Ontario</p>
               </div>
             </div>
           </div>
@@ -155,22 +152,13 @@ function ContactUs() {
             </div>
           </div>
         </div>
-        <div>
-          <a
-            className="lead"
-            target={"_blank"}
-            href="https://maps.app.goo.gl/HDfixCLF5L6EE4NL7"
-          >
-            Check Out Our Reviews on Google.
-          </a>
-        </div>
+        <div></div>
       </div>
       <div className="container pb-5">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d167039.36295299663!2d-123.06122823380059!3d49.14381340610089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d9277d5627f7%3A0xd449de4f76f94fc1!2sAkartar%20Janitorial%20Services%20Ltd.!5e0!3m2!1sen!2sus!4v1649927265187!5m2!1sen!2sus"
+          src="https://www.google.com/maps/d/embed?mid=1CMHZ5SPOU8nf0MnDpO0Ih_P-nZY&ehbc=2E312F"
           width="100%"
           height="450px"
-          loading="lazy"
         ></iframe>
       </div>
     </div>

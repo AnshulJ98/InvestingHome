@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 function Navigation() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light fs-5">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light fs-5 box">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
           <img className="img-responsive" width="60%" src="/logo512.png"></img>
