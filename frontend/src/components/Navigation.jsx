@@ -4,10 +4,14 @@ import { useEffect, useState } from "react";
 
 function Navigation() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light fs-5 box">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light fs-5">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
-          <img className="img-responsive" width="60%" src="/logo512.png"></img>
+          <img
+            className="img-responsive"
+            width="100%"
+            src="/homelord.jpg"
+          ></img>
         </NavLink>
         <NavLink
           className="display-6  fs-1 fw-normal text-decoration-none navbar-toggler border-0"
@@ -36,6 +40,11 @@ function Navigation() {
               <li className="nav-item">
                 <NavLink className="nav-link" aria-current="page" to="/">
                   Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/listings">
+                  Listings
                 </NavLink>
               </li>
               <li className="nav-item">

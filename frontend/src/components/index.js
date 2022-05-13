@@ -5,3 +5,4 @@ export { default as House } from "./House";
 export { default as AboutUs } from "./AboutUs";
 export { default as ContactUs } from "./ContactUs";
 export { default as Tiers } from "./Tiers";
+export { default as Listings } from "./Listings";

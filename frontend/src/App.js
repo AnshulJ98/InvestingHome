@@ -9,6 +9,7 @@ import {
   Tiers,
   ContactUs,
   AboutUs,
+  Listings
 } from "./components";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/house" element={<House />} />
+          <Route path="/listings" element={<Listings />} />
           <Route path="/tiers" element={<Tiers />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contactus" element={<ContactUs />} />

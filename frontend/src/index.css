@@ -54,7 +54,7 @@ a:hover {
 
 
 .navbar-brand {
-  width: 12%;
+  width: 15%;
 }
 .middleTile {
   border-radius: 10px;
@@ -69,7 +69,7 @@ a:hover {
   border-radius: 10px;
 }
 .logo {
-  background-image: url("/public/logo512.png");
+  background-image: url("/public/homelord.jpg");
 }
 
 #call-us{
