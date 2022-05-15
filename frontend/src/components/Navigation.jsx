@@ -7,11 +7,7 @@ function Navigation() {
     <nav className="navbar navbar-expand-lg navbar-light bg-light fs-5">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
-          <img
-            className="img-responsive"
-            width="100%"
-            src="/homelord.jpg"
-          ></img>
+          <img className="img-responsive" width="40%" src="/homelord.jpg"></img>
         </NavLink>
         <NavLink
           className="display-6  fs-1 fw-normal text-decoration-none navbar-toggler border-0"
