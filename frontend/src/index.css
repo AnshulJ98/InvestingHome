@@ -38,6 +38,14 @@ a:hover {
   background-size: fill;
 }
 
+.listing-banner {
+  background-image: url("/public/AdobeStock_259097390-scaled-1.jpeg");
+  background-repeat: repeat-y;
+  background-position: 50%;
+  background-position-y: 48%;
+  background-size:contain;
+}
+
 .videoText {
   position: relative;
   min-height: 950px;
@@ -89,8 +97,49 @@ text-shadow: 0 0 10px rgba(0,0,0,0.5);
   color: #00C774;
 }
 
+.gold {
+  color: #FFD700;
+}
+
+.silver {
+  color: #C0C0C0;
+}
+
+.bronze {
+  color: #CD7F32;
+}
+
 .l1 {
   color: #033B6C;
+}
+
+.landing-video {
+  color: #00C774;
+}
+
+.landing-video-1 {
+  background-color: #00C774;
+}
+
+.roadmap {
+  color: #FEA655;
+  width: 50%;
+}
+
+.roadmap-step {
+  background-color: #FEA655;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 8px;
+}
+.roadmap-final-step {
+  color: #FEA655;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.story-img {
+  border-radius: 12px;
 }
 .navbar-brand {
   width: 15%;
