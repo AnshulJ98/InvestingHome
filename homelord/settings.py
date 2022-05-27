@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+
+from os import environ, path
+from dotenv import load_dotenv
+basedir = path.abspath(path.dirname(__file__))
+load_dotenv(path.join(basedir, '.env'))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,23 +26,40 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-r13!b^o)w)rzl^*fa3x26#g!%biq7oj*s4_2!+!mibxbx=go^i'
+SECRET_KEY = environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+CSRF_COOKIE_NAME = "csrftoken"
+CSRF_HEADER_NAME = "HTTP_X_CSRFTOKEN"
 
-
+Access_Control_Allow_Origin: [
+    "http://0.0.0.0",
+    "http://localhost",
+    "http://akjanitorial.ca",
+    "http://31.220.108.76",
+    "http://akjanitorial.ca:3000",
+    "http://31.220.108.76:3000",
+    "http://akjanitorial.ca:8000",
+    "http://31.220.108.76:8000",
+    "http://akjanitorial.ca:443",
+    "http://31.220.108.76:443",
+    "https://akjanitorial.ca"
+]
 # Application definition
 
 INSTALLED_APPS = [
+    'homelordapp.apps.HomelordappConfig',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +70,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'homelord.urls'
@@ -54,7 +78,7 @@ ROOT_URLCONF = 'homelord.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend/build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,8 +99,12 @@ WSGI_APPLICATION = 'homelord.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': environ.get('DB_NAME'),
+        'USER': environ.get('DB_USER'),
+        'PASSWORD': environ.get('DB_PASSWORD'),
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -121,3 +149,43 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'frontend/build/static')
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://0.0.0.0:3000",
+    "http://localhost",
+    "http://127.0.0.1",
+    "http://0.0.0.0",
+    "http://31.220.108.76",
+    "http://31.220.108.76:3000",
+    "http://31.220.108.76:8080",
+    "http://192.168.0.195:3000",
+    "http://172.23.31.163",
+    "http://172.23.31.163:3000",
+    "http://192.168.0.172",
+    "http://192.168.0.172:3000",
+    "https://akjanitorial.ca",
+    "https://www.akjanitorial.ca"
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://0.0.0.0",
+    "http://localhost",
+    "http://akjanitorial.ca",
+    "http://31.220.108.76",
+    "http://akjanitorial.ca:3000",
+    "http://31.220.108.76:3000",
+    "http://akjanitorial.ca:8000",
+    "http://31.220.108.76:8000",
+    "http://akjanitorial.ca:443",
+    "http://31.220.108.76:443",
+    "https://akjanitorial.ca"
+]
